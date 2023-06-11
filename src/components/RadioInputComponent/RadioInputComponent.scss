@@ -1,0 +1,25 @@
+.radioInputComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+    user-select: none;
+    & label {
+        font-size: 14px;
+        font-weight: 700;
+        user-select: none;
+        cursor: pointer;
+        margin-right: 3px;
+        & input {
+            display: none;
+        }
+    }
+}
+
+.active {
+    color: #378FC9;
+}
+
+.disabled {
+    color: #7A7A7A;
+}

@@ -1,0 +1,26 @@
+.buttonComponent {
+    display: block;
+    padding: 11px;
+    background: #378FC9;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+        -webkit-box-shadow:0px 0px 5px 0px  rgba(0, 0, 0, .3);
+        -moz-box-shadow:0px 0px 5px 0px  rgba(0, 0, 0, .3);
+        box-shadow:0px 0px 5px 0px  rgba(0, 0, 0, .3) ;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .buttonComponent{
+        font-size: 2.3em;
+        height: auto;
+        padding: 30px;
+        border-radius: 6px;
+    } 
+}

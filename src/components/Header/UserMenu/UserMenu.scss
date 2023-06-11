@@ -1,0 +1,32 @@
+.userMenu {
+    padding: 30px 20px;
+    width: 180px!important;
+    position: absolute;
+    z-index: 9999;
+    top: 95px;
+    right: 0px;
+    & .cardComponent {
+        border-radius: 0;
+        background: #fff;
+        & nav {
+            display: flex;
+            flex-direction: column;
+            & span {
+                color: #7A7A7A;
+                cursor: pointer;
+                margin: 8px 0;
+                &:hover {
+                    color: #378FC9;
+                }
+            }
+        }
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

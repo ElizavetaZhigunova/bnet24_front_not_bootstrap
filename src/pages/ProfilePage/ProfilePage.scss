@@ -1,0 +1,39 @@
+.profilePage {
+    & .pageTitleComponent {
+        margin-top: 45px;
+        margin-bottom: 35px;
+
+    }
+    & .cardComponent {
+        width: 670px;
+        height: 500px;
+        padding: 46px;
+    }
+
+    & .inputWrapper {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 15px;
+        & label {
+            width: 40%;
+        }
+        & .inputComponent {
+            &::placeholder {
+                color: #C3C3C3;
+            }
+        }
+    }
+    & .avatarWrapper {
+        margin-top: 35px;
+    }
+    & .inputFileWrapper {
+        margin-top: 10px;
+        font-size: 10px;
+        color: #5AA2D2;
+        border-bottom: 1px dashed #5AA2D2;
+        width: fit-content;
+        & .inputTypeFile {
+            display: none;
+        }
+    }
+}

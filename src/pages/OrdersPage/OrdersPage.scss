@@ -1,0 +1,16 @@
+.ordersPage {
+    & .pageTitleComponent {
+        margin-top: 45px;
+        margin-bottom: 21px;
+    }
+    & .orderBoxComponent {
+        max-width: 35%;
+        margin-top: 27px;
+        min-width: auto;
+        height: 60vh;
+        overflow-y: scroll;
+        .searchComponent {
+            margin-bottom: 35px;
+        }
+    }
+}

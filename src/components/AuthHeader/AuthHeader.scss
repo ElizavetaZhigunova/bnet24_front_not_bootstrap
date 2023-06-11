@@ -1,0 +1,31 @@
+.authHeader {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+
+        label {
+            margin-right: 18px;
+            padding-bottom: 3px;
+            cursor: pointer;
+            user-select: none;
+
+            &.disabled {
+                color: #7A7A7A;   
+            }
+            &.active {
+                color: #378FC9;
+                border-bottom: 1px solid #378FC9; 
+            }
+        }
+
+    input {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) { 
+    .authHeader{
+        font-size: 2.8em;
+    }
+}

@@ -1,0 +1,45 @@
+.signInPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cardComponent {
+        padding: 55px;
+        width: 486px;
+    
+        input {
+            margin-bottom: 20px;
+        }
+    
+        .buttonComponent {
+            margin-top: 20px;
+        }
+    }
+    .authHeader {
+        margin-bottom: 40px;
+    }
+    .remember {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        .forgot-pass {
+            color: #378FC9;
+        }
+        .remember-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .checkbox {
+            transform: scale(1.8);
+            margin-right: 15px;
+        }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .remember {
+        font-size: 2em;
+    }
+}
+
