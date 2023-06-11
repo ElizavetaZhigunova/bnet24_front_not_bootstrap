@@ -1,0 +1,39 @@
+.forgot {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cardComponent {
+        padding: 55px;
+        width: 486px;
+        input {
+            margin-bottom: 20px;
+        }
+        .buttonComponent {
+            margin-top: 20px;
+        }
+        .title-f {
+            margin-bottom: 30px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .title-f {
+        font-size: 2em;
+    }
+    .cardComponent{
+        --toastify-toast-width: 100%;
+    } 
+        .Toastify__toast-body {
+            font-size: 45px;
+        }
+        .Toastify__toast-icon {
+            transform: scale(1.5);
+        }
+        .Toastify__close-button {
+            transform: scale(2);
+        }
+}
+
