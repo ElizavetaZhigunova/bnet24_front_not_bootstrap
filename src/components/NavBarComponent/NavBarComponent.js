@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, } from "react"
 import { useSelector } from "react-redux"
 import { NavLink, useLocation, useNavigate } from "react-router-dom"
 import { BacketIcon } from "../../assets/icons/NavIcons/BacketIcon"
@@ -54,12 +54,14 @@ export const NavBarComponent = () => {
     const navigate = useNavigate()
     const user = useSelector((state) => state?.user?.data?.user)
 
+    const [isBurderOpen, setIsBurgerOpen] = useState(false)
+
     // console.log("location", user)
 
     return (
         <nav className="navBarComponent">
             <ul>
-                {navItem.map((el) => {
+                {navItem.filter((el) => el < 5).map((el) => {
                     const fill = location.pathname === el.path ? "#378FC9" : "#ffffff"
                     return (
                         <li key={el.path} onClick={() => navigate(el.path)}>

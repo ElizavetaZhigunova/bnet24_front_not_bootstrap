@@ -1,6 +1,6 @@
 .userMenu {
     padding: 30px 20px;
-    width: 180px!important;
+    width: auto;
     position: absolute;
     z-index: 9999;
     top: 95px;
@@ -22,6 +22,42 @@
         }
     }
 }
+.icon-container {
+    width: 50px;
+    margin-right: 20px;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    &.f {
+        background-image: url('../../../assets/icons/RightSideMenu/image5.svg');
+    }
+    &.s {
+        background-image: url('../../../assets/icons/RightSideMenu/image6.svg');
+    }
+    &.t {
+        background-image: url('../../../assets/icons/RightSideMenu/flaticon1480430539-64.svg');
+    }
+    &.fo {
+        background-image: url('../../../assets/icons/RightSideMenu/flaticon1480431441-64.svg');
+    }
+    &.fi {
+        background-image: url('../../../assets/icons/RightSideMenu/settings-svgrepo-com.svg');
+    }
+    &.si {
+        background-image: url('../../../assets/icons/RightSideMenu/password-check-svgrepo-com.svg');
+    }
+
+}
+.icon-inc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    background: rosybrown;
+}
 
 .visible {
     display: block;
@@ -29,4 +65,12 @@
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .user-menu {
+        &__link {
+            font-size: 35px;
+        }
+    }
 }

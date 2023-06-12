@@ -19,8 +19,36 @@ const UserMenu = (props) => {
         <div className={`userMenu ${props.visible ? "visible" : "hidden"}`}>
             <CardComponent>
                 <nav>
-                    <span className="user-menu__link">Настройки</span>
-                    <span className="user-menu__link">Изменить пароль</span>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container f"><div className="icon"></div></div>
+                        <div className="icon-inc">3</div>
+                        <span className="user-menu__link">Почта</span>
+                    </div>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container s"><div className="icon"></div></div>
+                        <div className="icon-inc">3</div>
+                        <span className="user-menu__link">Сообщения</span>
+                    </div>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container t"><div className="icon"></div></div>
+                        <div className="icon-inc">3</div>
+                        <span className="user-menu__link">Уведомления</span>
+                    </div>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container fo"><div className="icon"></div></div>
+                        
+                        <span className="user-menu__link">Поиск</span>
+                    </div>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container fi"><div className="icon"></div></div>
+                        
+                        <span className="user-menu__link">Настройки</span>
+                    </div>
+                    <div style={{display: "flex"}}> 
+                        <div className="icon-container si"><div className="icon"></div></div>
+                        
+                        <span className="user-menu__link">Изменить пароль</span>
+                    </div>
                 </nav>
             </CardComponent>
         </div>

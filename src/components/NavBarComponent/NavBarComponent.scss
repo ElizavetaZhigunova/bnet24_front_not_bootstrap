@@ -24,3 +24,29 @@
     }
     
 }
+
+@media screen and (max-width: 1024px) {
+    .navBarComponent{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: auto;
+        & ul {
+            font-size: 20px;
+            display: flex;
+            align-items: flex-end;
+            
+        }
+        & li {
+            margin-right: 38px;
+            margin-bottom: 0!important;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        & span {
+            margin-top: 6px;
+        }
+    }
+}
