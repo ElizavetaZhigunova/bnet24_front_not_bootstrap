@@ -1,0 +1,77 @@
+.navBarMobComponent {
+    background: #313436;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px;
+    min-width: fit-content;
+    & ul {
+        margin: 0;
+        padding: 0;
+        & li {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 38px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        & span {
+            margin-top: 6px;
+            text-align: center;
+        }
+    }
+    .btn-burger {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 1024px) {
+    .navBarMobComponent{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        & ul {
+            font-size: 20px;
+            display: flex;
+            align-items: flex-end;
+            
+        }
+        & li {
+            margin-right: 38px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-size: 50px;
+            cursor: pointer;
+        }
+        & span {
+            margin-top: 6px;
+            text-align: center;
+            margin-left: 20px;
+        }
+        .btn-burger {
+            display: flex;
+        }
+    }.burger-menu {
+        position: fixed;
+        bottom: 244px;
+        right: 0;
+        display: flex;
+        background: #313436;
+        color: rgb(255 255 255);
+        flex-direction: column;
+        animation: ani 2.5s forwards;
+        padding: 15px;
+        & li {
+            flex-direction: row;
+            margin-bottom: 15px;
+        }
+        }
+        
+}

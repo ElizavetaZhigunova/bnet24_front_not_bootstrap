@@ -10,6 +10,7 @@ import "./SignInPage.scss"
 export const SignInPage = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const user = useSelector((state) => state.user)
     const isLogin = useSelector((state) => state.user.isLogin)
 
     const [email, setEmail] = useState("")
@@ -36,6 +37,7 @@ export const SignInPage = () => {
                 <AuthHeader />
                 <InputComponent type="email" placeholder="E-mail" value={email} onChange={handlerEmail} />
                 <InputComponent type="password" placeholder="Пароль" value={password} onChange={handlerPassword} />
+                {user.error && <span className="error-message">Некорректно введены данные</span>}
                 <ButtonComponent title="Войти" onClick={handlerAuth} />
                 <div className="remember">
                     <div className="remember-me">

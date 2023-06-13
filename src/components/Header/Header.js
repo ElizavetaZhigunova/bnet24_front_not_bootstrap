@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 import { ExitIcon } from "../../assets/icons/HeaderIcons/ExitIcon"
 import { HamburgerIcon } from "../../assets/icons/HeaderIcons/HamburgerIcon"
-// import { removeUser } from "store/slices/userSlice"
+import { removeUser } from "../../store/slices/userSlice"
 import Clock from "./Clock/Clock"
 import DateHeader from "./DateHeader/DateHeader"
 
@@ -14,7 +14,7 @@ export const Header = () => {
     const dispatch = useDispatch()
     const [visibleUserMenu, setVisibleUserMenu] = useState(false)
 
-    // const logOut = () => dispatch(removeUser())
+    const logOut = () => dispatch(removeUser())
 
     const handlerUserMenu = () => setVisibleUserMenu(!visibleUserMenu)
 
@@ -26,8 +26,8 @@ export const Header = () => {
                     <Clock />
                     <DateHeader />
                 </div>
-                {/* <div className="header__left-item" onClick={logOut}> */}
-                <div className="header__left-item">
+                {/* <div className="header__left-item" > */}
+                <div className="header__left-item" onClick={logOut}>
                     <ExitIcon />
                 </div>
             </div>

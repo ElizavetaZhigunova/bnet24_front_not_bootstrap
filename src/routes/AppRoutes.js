@@ -11,6 +11,7 @@ import {
     RoutesPage,
     SignInPage,
     SignUpPage,
+    CompaniesListPage,
 } from "../pages"
 import ForgotPage from "../pages/ForgotPage/ForgotPage"
 
@@ -21,6 +22,14 @@ function AppRoutes() {
         { path: "/forgot-pas", element: <ForgotPage /> },
         {
             path: "/",
+            element: (
+                <BaseLayout>
+                    <CompaniesListPage />
+                </BaseLayout>
+            ),
+        },
+        {
+            path: "/profile",
             element: (
                 <BaseLayout>
                     <ProfilePage />

@@ -55,13 +55,49 @@ export const NavBarComponent = () => {
     const user = useSelector((state) => state?.user?.data?.user)
 
     const [isBurderOpen, setIsBurgerOpen] = useState(false)
+    
+    const burgerMenuItems = navItem.filter((item, index) => index <= 0 || index >= 4).map(item => 
+        <li key={item.path} onClick={() => navigate(item.path)}>
+            {item.path === "/" && user?.avatar ? (
+                <image src={user?.avatar} width={60} height={60} />
+            ) : (
+                item.icon("#ffffff")
+            )}
+
+            {item.path === "/" && user?.firstName ? (
+                <span style={{ color: "#ffffff" }}>{user.firstName}</span>
+            ) : (
+                <span style={{ color: "blue" }}>{item.title}</span>
+            )}
+        </li>
+    )
+
+    const menuItems = navItem.slice(1,4).map((el) => {
+        const fill = location.pathname === el.path ? "#378FC9" : "#ffffff"
+        return (
+            <li key={el.path} onClick={() => navigate(el.path)}>
+                {el.path === "/" && user?.avatar ? (
+                    <image src={user?.avatar} width={60} height={60} />
+                ) : (
+                    el.icon(fill)
+                )}
+
+                {el.path === "/" && user?.firstName ? (
+                    <span style={{ color: "#ffffff" }}>{user.firstName}</span>
+                ) : (
+                    <span style={{ color: fill }}>{el.title}</span>
+                )}
+            </li>
+        )
+    })
 
     // console.log("location", user)
 
     return (
         <nav className="navBarComponent">
             <ul>
-                {navItem.filter((el) => el < 5).map((el) => {
+            {isBurderOpen && <div className="burger-menu" >{burgerMenuItems}</div> && <div className="menu-items">{menuItems}</div>}
+                {navItem.map((el) => {
                     const fill = location.pathname === el.path ? "#378FC9" : "#ffffff"
                     return (
                         <li key={el.path} onClick={() => navigate(el.path)}>
@@ -80,6 +116,7 @@ export const NavBarComponent = () => {
                     )
                 })}
             </ul>
+            <div style={{color: "blue", fontSize: "20px"}} onClick={() => setIsBurgerOpen(true)}>Открыть бургер</div>
         </nav>
     )
 }
