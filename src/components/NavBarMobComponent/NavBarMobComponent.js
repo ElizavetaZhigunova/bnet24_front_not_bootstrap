@@ -65,6 +65,11 @@ export const NavBarMobComponent = () => {
     const isDesktop = useMediaQuery({
         query: '(min-width: 1025px)' // Задаем минимальную ширину для десктопов
       });
+
+    const openCloseMenu = () => {
+        setIsBurgerOpen(true)
+        setIsBurgerOpen(false)
+    }
     
     const burgerMenuItems = navItem.filter((item, index) => index <= 0 || index >= 4).map(item => {
         const fill = location.pathname === item.path ? "#378FC9" : "#ffffff"

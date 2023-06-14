@@ -1,3 +1,56 @@
+@media screen and (max-width: 1024px) {
+    .companies-title {
+        font-size: 3em;
+        font-family: 'PT Sans Caption';
+        font-style: normal;
+        font-weight: 700;
+        color: #313436;
+        margin-top: 900px;
+    }
+    .card-companies {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .companies-wrapper {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            width: max-content;
+
+            .btns-remove-edit {
+                width: auto;
+                margin-bottom: 10px;
+            }
+            .companies-container {
+                padding: 20px;
+                display: flex;
+                width: 100%;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+
+                .name-companies{
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    color: #378FC9;
+                }
+                .items-companies {
+                    display: flex;
+                    font-size: 2em;
+                    color: #313436;
+                    margin-top: 10px;
+                }
+                .about-companies {
+                    display: flex;
+                    width: 80%;
+                    font-size: 2em;
+                    color: #98999B;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
 .companies-title {
     font-size: 3em;
     font-family: 'PT Sans Caption';
