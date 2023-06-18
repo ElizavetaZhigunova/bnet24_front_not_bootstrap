@@ -16,3 +16,26 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .searchComponent {
+        display: flex;
+        align-items: flex-end;
+        & .buttonComponent {
+            border-radius: 5px;
+            background: #f7f7f7;
+            border: 1px solid #d8d8d8;
+            color: #313436;
+            font-size: 12px;
+            padding: 6px 22px;
+        }
+        & .inputComponent {
+            margin-right: 9px;
+            margin-top: 30px;
+            width: 350px;
+            & input {
+                text-indent: 30px;
+            }
+        }
+    } 
+}

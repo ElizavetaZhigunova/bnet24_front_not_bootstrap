@@ -1,0 +1,34 @@
+.remember {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    .forgot-pass {
+        color: #378FC9;
+    }
+    .remember-me {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    .checkbox {
+        transform: scale(1.8);
+        margin-right: 15px;
+    }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+        .remember {
+            font-size: 2em;
+        }   
+        .cardComponent {
+            .error-message {
+                font-size: 2em;
+                color: red;
+            }
+            .error-message-signIn {
+                font-size: 2em;
+                color: red;
+                margin-bottom: 14px;
+            }
+        }
+    }

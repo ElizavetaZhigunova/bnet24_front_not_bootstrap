@@ -1,0 +1,77 @@
+@media screen and (max-width: 1024px) {
+    .pol-signUp {
+        font-family: 'Pt Sans Caption';
+        font-size: 2em;
+        margin-top: 15px;
+    }
+    .error-message-signUp {
+        font-size: 2em;
+        color: #B72525;
+    }
+}
+
+.signUpPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cardComponent {
+        padding: 55px;
+        width: 486px;
+    
+        input {
+            margin-bottom: 20px;
+        }
+    
+        .buttonComponent {
+            margin-top: 20px;
+        }
+        .error-message {
+            font-size: 1em;
+            color: #B72525;
+        }
+        .error-message-signIn {
+            font-size: 1em;
+            color: #B72525;
+            margin-bottom: 14px;
+        }
+    }
+    .authHeader {
+        margin-bottom: 40px;
+    }
+    .remember {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        .forgot-pass {
+            color: #378FC9;
+            text-decoration: none;
+        }
+        .remember-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .checkbox {
+            transform: scale(1.8);
+            margin-right: 15px;
+        }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .signUpPage {  
+        .cardComponent {
+            .error-message {
+                font-size: 2em;
+                color: red;
+            }
+            .error-message-signIn {
+                font-size: 2em;
+                color: red;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}
+

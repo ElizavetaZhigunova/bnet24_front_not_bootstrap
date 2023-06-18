@@ -14,6 +14,15 @@
         .buttonComponent {
             margin-top: 20px;
         }
+        .error-message {
+            font-size: 1em;
+            color: red;
+        }
+        .error-message-signIn {
+            font-size: 1em;
+            color: red;
+            margin-bottom: 14px;
+        }
     }
     .authHeader {
         margin-bottom: 40px;
@@ -24,6 +33,7 @@
         margin-top: 25px;
         .forgot-pass {
             color: #378FC9;
+            text-decoration: none;
         }
         .remember-me {
             display: flex;
@@ -38,8 +48,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .remember {
-        font-size: 2em;
+    .signInPage {
+        .remember {
+            font-size: 2em;
+        }   
+        .cardComponent {
+            .error-message {
+                font-size: 2em;
+                color: red;
+            }
+            .error-message-signIn {
+                font-size: 2em;
+                color: red;
+                margin-bottom: 14px;
+            }
+        }
     }
 }
 

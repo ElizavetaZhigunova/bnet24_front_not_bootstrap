@@ -22,12 +22,18 @@
             margin-top: 6px;
         }
     }
+    .burger-menu {
+        display: none;
+    }
     
 }
 
 @media screen and (max-width: 1024px) {
     .navBarComponent{
         position: fixed;
+        background: #313436;
+    display: flex;
+    align-items: center;
         bottom: 0px;
         width: 100%;
         height: auto;
@@ -47,6 +53,12 @@
         }
         & span {
             margin-top: 6px;
+        }
+        .burger-menu {
+            display: flex;
+            background: #000;
+            color: white;
+            position: absolute;
         }
     }
 }

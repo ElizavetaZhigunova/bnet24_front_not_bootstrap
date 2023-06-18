@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { NavBarComponent } from "../../components"
+import { NavBarMobComponent } from "../../components"
 import PageLayout from "../PageLayout/PageLayout"
 // import PageLayout from "layout/PageLayout/PageLayout"
 // import { NavBar } from "components"
@@ -19,7 +19,7 @@ const BaseLayout = ({ children }) => {
 
     return (
         <div className="base">
-            <NavBarComponent />
+            <NavBarMobComponent />
             <PageLayout children={children} />
         </div>
     )
