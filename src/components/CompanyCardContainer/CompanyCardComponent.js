@@ -5,7 +5,7 @@ import './CompanyCardComponent.scss'
 
 export const CompanyCardComponent = ({ name, leader, accountant, inn_kpp, address, phones, email, site, img }) => {
   return (
-    <CardComponent className="card-companies">
+    <>
       <span className='btns-remove-edit'>уд ред</span>
       <div className='companies-container'>
         <div className="left-side-companies">
@@ -40,6 +40,6 @@ export const CompanyCardComponent = ({ name, leader, accountant, inn_kpp, addres
           <div className="img-companies">{img}</div>
         </div>
       </div>
-    </CardComponent>
+    </>
   )
 }

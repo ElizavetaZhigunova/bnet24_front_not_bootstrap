@@ -33,8 +33,11 @@
 @media screen and (max-width: 1024px) {
     .navBarMobComponent{
         position: fixed;
-        bottom: 0px;
-        width: 100%;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1000; /* добавляем z-index, чтобы блок был поверх других элементов */
+    margin-top: 60px; /* задаем отступ сверху */
+    box-sizing: border-box; /* учитываем padding в расчетах */
         & ul {
             font-size: 20px;
             display: flex;
