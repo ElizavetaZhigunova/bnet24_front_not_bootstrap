@@ -12,6 +12,8 @@ import './NavBarMobComponent.scss'
 
 import { useMediaQuery } from 'react-responsive';
 
+import More from '../../assets/icons/NavIcons/Group370.svg'
+
 const navItem = [
     {
         path: "/",
@@ -44,7 +46,7 @@ const navItem = [
         icon: (fill) => <DirectoryIcon fill={fill} width='65' height='65' />,
     },
     {
-        path: "/directory",
+        path: "/partners",
         title: "Партнеры",
         icon: (fill) => <DirectoryIcon fill={fill}  width='65' height='65'/>,
     },
@@ -67,8 +69,7 @@ export const NavBarMobComponent = () => {
       });
 
     const openCloseMenu = () => {
-        setIsBurgerOpen(true)
-        setIsBurgerOpen(false)
+        setIsBurgerOpen(!isBurderOpen)
     }
     
     const burgerMenuItems = navItem.filter((item, index) => index <= 0 || index >= 4).map(item => {
@@ -137,29 +138,34 @@ export const NavBarMobComponent = () => {
                 navItem.map((el) => {
                     const fill = location.pathname === el.path ? "#378FC9" : "#ffffff"
                     return (
-                        <ul><li key={el.path} onClick={() => navigate(el.path)}>
-                            {el.path === "/" && user?.avatar ? (
-                                <image src={user?.avatar} width={60} height={60} />
-                            ) : (
-                                el.icon(fill)
-                            )}
-            
-                            {el.path === "/" && user?.firstName ? (
-                                <span style={{ color: "#ffffff" }}>{user.firstName}</span>
-                            ) : (
-                                <span style={{ color: fill }}>{el.title}</span>
-                            )}
-                        </li></ul>
+                        <ul>
+                            <li key={el.path} onClick={() => navigate(el.path)}>
+                                {el.path === "/" && user?.avatar ? (
+                                    <image src={user?.avatar} width={60} height={60} />
+                                ) : (
+                                    el.icon(fill)
+                                )}
+                
+                                {el.path === "/" && user?.firstName ? (
+                                    <span style={{ color: "#ffffff" }}>{user.firstName}</span>
+                                ) : (
+                                    <span style={{ color: fill }}>{el.title}</span>
+                                )}
+                            </li>
+                        </ul>
                     )
                 })
             ) : (
                 // Если устройство не является десктопом, то скрываем элементы и показываем их в бургер меню
                 <div style={{display: "flex"}}>
-                {isBurderOpen && <div className="burger-menu" >{burgerMenuItems}</div>}
+                {isBurderOpen && <div className={isBurderOpen ? "burger-menu active" : "burger-menu"} >{burgerMenuItems}</div>}
                   
                 <div style={{display: 'flex'}}>{menuItems}</div>
-                <div className='btn-burger' style={{color: "white", fontSize: "30px"}} onClick={() => setIsBurgerOpen(true)}>Открыть бургер</div>
-                <div className='btn-burger' style={{color: "white", fontSize: "30px",}} onClick={() => setIsBurgerOpen(false)}>Close бургер</div>
+
+                <div className='btn-burger' style={{color: "white", fontSize: "50px"}} onClick={openCloseMenu}>
+                    <div style={{height: '65px', width: '95px'}}><img src={More} alt="" /></div>
+                    <span style={{margin: 0, marginTop: "6px"}}>Еще</span>
+                </div>
                 </div>
             )}
 

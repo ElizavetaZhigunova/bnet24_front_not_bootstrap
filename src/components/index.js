@@ -13,3 +13,4 @@ export { SwitchBoxComponent } from "./SwitchBoxComponent/SwitchBoxComponent"
 export { SearchComponent } from "./SearchComponent/SearchComponent"
 export { AccordionComponent } from "./AccordionComponent/AccordionComponent"
 export { NavBarMobComponent } from './NavBarMobComponent/NavBarMobComponent'
+export { CompanyCardComponent } from './CompanyCardContainer/CompanyCardComponent'

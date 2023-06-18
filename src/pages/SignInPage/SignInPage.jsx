@@ -97,6 +97,7 @@ export const SignInPage = () => {
         dispatch(signIn(input.email, input.password))
     }
 
+
     useEffect(() => {
         if (isLogin) {
             navigate("/")
@@ -114,6 +115,7 @@ export const SignInPage = () => {
                     onBlur={validateInput} 
                     placeholder="E-mail" 
                     onChange={onInputChange} 
+                    
                 />
                {error.email && <div className="error-message-signUp">{error.email}</div>}
                 <InputComponent 
@@ -124,10 +126,11 @@ export const SignInPage = () => {
                     value={input.password} 
                     onChange={onInputChange}
                     onBlur={validateInput} 
+                    
                 />
                 {error.password && <div className="error-message-signUp">{error.password}</div>}
                 {user.error && <span className="error-message">Неверный E-mail или пароль</span>}
-                <ButtonComponent title="Войти" onClick={handleAuth}/>
+                <ButtonComponent title="Войти" onClick={handleAuth} />
                 <RememberMeComponent />
             </CardComponent>
         </div>

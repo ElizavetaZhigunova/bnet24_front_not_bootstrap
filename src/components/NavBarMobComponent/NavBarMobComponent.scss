@@ -57,6 +57,9 @@
         }
         .btn-burger {
             display: flex;
+            flex-direction: column;
+            margin-right: 38px;
+            opacity: 1;
         }
     }.burger-menu {
         position: fixed;
@@ -68,10 +71,15 @@
         flex-direction: column;
         animation: ani 2.5s forwards;
         padding: 25px;
+        transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
         & li {
             flex-direction: row;
             margin-bottom: 15px;
         }
+        }
+        .burger-menu.active {
+            
         }
         
 }
