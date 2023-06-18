@@ -15,8 +15,13 @@
             margin-top: 20px;
         }
         .error-message {
-            font-size: 12px;
+            font-size: 1em;
             color: red;
+        }
+        .error-message-signIn {
+            font-size: 1em;
+            color: red;
+            margin-bottom: 14px;
         }
     }
     .authHeader {
@@ -42,8 +47,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .remember {
-        font-size: 2em;
+    .signInPage {
+        .remember {
+            font-size: 2em;
+        }   
+        .cardComponent {
+            .error-message {
+                font-size: 2em;
+                color: red;
+            }
+            .error-message-signIn {
+                font-size: 2em;
+                color: red;
+                margin-bottom: 14px;
+            }
+        }
     }
 }
 

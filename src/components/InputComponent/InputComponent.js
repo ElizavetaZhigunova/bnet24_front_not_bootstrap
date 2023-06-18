@@ -6,7 +6,7 @@ export const InputComponent = (props) => {
     return (
         <div className={`inputComponent ${props.className}`}>
             <div className="inputComponentIcon">{props.icon}</div>
-            <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange} />
+            <input onBlur={props.onBlur} type={props.type} placeholder={props.placeholder}  />
         </div>
     )
 }
